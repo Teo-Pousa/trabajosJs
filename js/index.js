@@ -53,7 +53,6 @@ function consultarPrendas() {
         mostrarCuotas(codigo)
     }
 }
-
 /*const clubes = ["Boca Juniors", "River Plate", "Independiente", "Racing", "San Lorenzo", "Velez", "Estudiantes", "Talleres", "Belgrano", "Lanus", "Rosario Central"]
 for (let i=0; i<=20; i++){
     console.log (clubes [i])
