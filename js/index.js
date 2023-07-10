@@ -1,59 +1,70 @@
-console.warn('Esto es una advertencia.')
-console.error('Houston, tenemos un problema.')
+const prendas = [
+    { nombre: "Zapatillas", precio: "$25.000" },
+    { nombre: "Remera", precio: "$10.000" },
+    { nombre: "Pantalon", precio: "$15.000" },
+    { nombre: "Buzo", precio: "$18.000" },
+    { nombre: "Botas", precio: "$35.000" },
+];
 
-let trabajoPractico = "de Js"
-const enDonde = "Coderhouse"
+let carrito = []
 
+let seleccion = prompt("Hola, Bienvenid@ a Empilchate, ¿desea comprar ropa?")
 
-let username = prompt( "elige nombre de usuario:" )
-if (username) {  
-    console.log( "Bienvenido😁", username)
+while (seleccion != "si" && seleccion != "no") {
+    alert("Por favor, ingrese si o no.")
+    seleccion = prompt("Hola, Bienvenid@ a Empilchate, ¿desea comprar ropa?")
 }
 
-let Edad = prompt( "Solo puedes seguir navegando si eres mayor de edad ¿Desea seguir navegando?")
-    if (Edad === "si") {
-        console.log( "Podras seguir navegando por el sitio.", username)
-} else { console.log("No puedes seguir en el sitio, Seras Redirijido.")
+if (seleccion == "si") {
+    alert("estas son las prendas que tenemos disponibles: ")
+    let prendasDisponibles = prendas.map((prendas) => prendas.nombre + " " + prendas.precio)
+    alert(prendasDisponibles.join(" - "))
+} else if (seleccion == "no") {
+    alert("Gracias por visitar nuestra página web, hasta pronto.")
+}
+
+while (seleccion != "no") {
+    let prendas = prompt("Agrega una prenda a tu carrito")
+    let precio = 0
+
+    if (prendas == "remera" || prendas == "pantalon" || prendas == "zapatillas" || prendas == "botas" || prendas == "buzo") {
+        switch (prendas) {
+            case "remera":
+                precio = 10000;
+                break;
+            case "pantalon":
+                precio = 15000;
+                break;
+            case "zapatillas":
+                precio = 25000;
+                break;
+            case "buzo":
+                precio = 18000;
+                break;
+            case "botas":
+                precio = 35000;
+                break;
+            default:
+                break;
+        }
+
+        let unidades = parseInt(prompt("¿Cuantas unidades desea comprar?"))
+        carrito.push({ prendas, unidades, precio })
+        console.log(carrito)
+    } else {
+        alert("Por el momento no contamos con esa prenda.")
     }
 
-console.log("1 para vestido, 2 para Remera , 3 para pantalon, 4 para zapatilla")
+    seleccion = prompt("¿Desea seguir comprando?")
 
-function mostrarCuotas() {
-    console.log("Contamos con hasta:")
-    for (let i=1; i<=6; i++) {
-    console.log(i + " cuota(s) sin interés.")
+    while (seleccion === "no"){
+        alert("¡Gracias por su compra! esperemos que la disfrutes y que vuelva pronto.")
+    carrito.forEach((carritoFinal) => {
+        console.log(`producto: ${carritoFinal.prendas} / unidades: ${carritoFinal.unidades}  / precio total por prendas: ${carritoFinal.unidades * carritoFinal.precio}`)
+    })
+    break;
     }
 }
 
-function verPrecio(codigo) {
-    switch (codigo) {
-        case "1":
-            console.log("el precio del vestido es de: $43.000")
-                break;
-        case "2":
-            console.log("el precio de la remera es de: $13.000")
-                break;
-        case "3":
-                console.log("el precio del pantalon es de: $16.000")
-                break;
-        case "4":
-                console.log("el precio de la zapatilla es de: $25.000")
-                break;
-        default:
-            console.warn("No entendimos tu respuesta, intente nuevamente.")
-                break;
-    }
-}
-
-function consultarPrendas() {
-    let respuesta = confirm("¿Desea consultar por alguna prenda?")
-    if (respuesta === true) {
-        let codigo = prompt("Ingresa el codigo numerico de la prenda:")
-        verPrecio(codigo)
-        mostrarCuotas(codigo)
-    }
-}
-/*const clubes = ["Boca Juniors", "River Plate", "Independiente", "Racing", "San Lorenzo", "Velez", "Estudiantes", "Talleres", "Belgrano", "Lanus", "Rosario Central"]
-for (let i=0; i<=20; i++){
-    console.log (clubes [i])
-} */
+const total = carrito.reduce((acc, el) => acc +  el.precio * el.unidades, 0)
+console.log("El total de la compra es de: " + total + " Gracias por su compra.")
