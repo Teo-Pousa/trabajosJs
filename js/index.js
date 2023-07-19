@@ -8,22 +8,21 @@ const prendas = [
 
 let carrito = []
 
-let seleccion = prompt("Hola, Bienvenid@ a Empilchate, ¿desea comprar ropa?")
-
-while (seleccion != "si" && seleccion != "no") {
-    alert("Por favor, ingrese si o no.")
-    seleccion = prompt("Hola, Bienvenid@ a Empilchate, ¿desea comprar ropa?")
+function saludo(){
+    return "Hola, Bienvenid@ a Empilchate, ¡espero que te podamos ayudar!"
 }
 
-if (seleccion == "si") {
+
+let seleccion = confirm("Hola, Bienvenid@ a Empilchate ¿desea comprar ropa?")
+
+while(seleccion) {
     alert("estas son las prendas que tenemos disponibles: ")
     let prendasDisponibles = prendas.map((prendas) => prendas.nombre + " " + prendas.precio)
     alert(prendasDisponibles.join(" - "))
-} else if (seleccion == "no") {
-    alert("Gracias por visitar nuestra página web, hasta pronto.")
+    break;
 }
 
-while (seleccion != "no") {
+while (seleccion) {
     let prendas = prompt("Agrega una prenda a tu carrito")
     let precio = 0
 
@@ -45,7 +44,6 @@ while (seleccion != "no") {
                 precio = 35000;
                 break;
             default:
-                break;
         }
 
         let unidades = parseInt(prompt("¿Cuantas unidades desea comprar?"))
@@ -56,12 +54,11 @@ while (seleccion != "no") {
     }
 
     seleccion = prompt("¿Desea seguir comprando?")
-
-    while (seleccion === "no"){
+    if( seleccion == "no"){
         alert("¡Gracias por su compra! esperemos que la disfrutes y que vuelva pronto.")
     carrito.forEach((carritoFinal) => {
         console.log(`producto: ${carritoFinal.prendas} / unidades: ${carritoFinal.unidades}  / precio total por prendas: ${carritoFinal.unidades * carritoFinal.precio}`)
-    })
+    }) 
     break;
     }
 }
