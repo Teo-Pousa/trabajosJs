@@ -1,32 +1,10 @@
-body{
-    background-color: rgb(255, 247, 133);
+.header{
+    background-color: grey;
+}
+.main{
+    background-color: grey;
 }
 
-header{
-    display: flex;
-    justify-content: center;
-}
-
-
-header div{
-    display: flex;
-    align-items: center;
-    font-size: 25px;
-    padding: 20px;
-}
-
-main{
-    display: flex;
-    justify-content: center;
-}
-
-main div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-img{
-    width: 200px;
-    height: 300px;
+footer{
+    background-color: grey;
 }

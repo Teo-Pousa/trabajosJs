@@ -6,54 +6,26 @@
     <title>Empilchate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script defer src="js/index.js"></script>
 </head>
 
-<body>
-    <header>
+<body class="font-Roboto,">
+    <header class="header">
         <div>
-            <h1>Empilchate</h1>
+            <h1 class="text-center">Empilchate</h1>
+            <h2 class="text-center">Vestite con la mejor ropa</h2>
         </div>
-        <div>
-            <h2>Vestite con la mejor ropa</h2>
+        <div class= "div-carrito text-center">
+            <p>carrito:<span id="productosEnCarrito">0</span></p>
         </div>
+        <input type="search" name="Buscar" id="inputSearch" placeholder="Buscar Producto">
     </header>
-    <main>
-        <section class="contenedor">
-        <div class="contenedor-items">
-            <div class="item">
-                <span class="prenda">Zapatillas</span>
-                <img src="./img/zapatillas.png.jpg" alt="zapatillas">
-                <span class="importePrenda">$25.000</span>
-                <button class="boton">Agregar al carrito</button>
-            </div>
-            <div class="item">
-                <span class="prenda">Remera</span>
-                <img src="./img/remera.png.jpg" alt="remera">
-                <span class="importePrenda">$10.000</span>
-                <button class="boton">Agregar al carrito</button>
-            </div>
-            <div class="item">
-                <span class="prenda">Pantalon</span>
-                <img src="./img/pantalon.png.jpg" alt="pantalon">
-                <span class="importePrenda">$15.000</span>
-                <button class="boton">Agregar al carrito</button>
-            </div>
-            <div class="item">
-                <span class="prenda">Buzo</span>
-                <img src="./img/buzo.png.jpg" alt="buzo">
-                <span class="importePrenda">$18.000</span>
-                <button class="boton">Agregar al carrito</button>
-            </div>
-            <div class="item">
-                <span class="prenda">Botas</span>
-                <img src="./img/botas.png.jpg" alt="botas">
-                <span class="importePrenda">$35.000</span>
-                <button class="boton">Agregar al carrito</button>
-            </div>
-        </section>
+    <main class="main">
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="card-template"></div>
     </main>
-    <footer>
+    <footer class="footer; text-center">
         <p>PRECIO TOTAL DE LA COMPRA DETALLADO EN LA CONSOLA</p>
         <p>Éste es un trabajo de Teo Pousa sobre JavaScript</p>
     </footer>
