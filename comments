@@ -1,0 +1,184 @@
+/*
+                    <div class="carrito-item">
+                        <img src="./img/botas.jpg" alt="" width="80px">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">Botas</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$20.000</span>
+                        </div>
+                        <span class="btn-eliminar">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                    <div class="carrito-item">
+                        <img src="./img/buzo.jpg" alt="" width="80px">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">buzo</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$13.000</span>
+                        </div>
+                        <span class="btn-eliminar">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                    <div class="carrito-item">
+                        <img src="./img/camisa.png" alt="" width="80px">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">camisa</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$12.000</span>
+                        </div>
+                        <span class="btn-eliminar">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                    <div class="carrito-item">
+                        <img src="./img/campera.jpg" alt="" width="80px">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">campera</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$17.000</span>
+                        </div>
+                        <span class="btn-eliminar">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                    <div class="carrito-item">
+                        <img src="./img/cordones.png" alt="" width="80px">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">cordones</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$1.000</span>
+                        </div>
+                        <span class="btn-eliminar">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                    <div class="carrito-item">
+                        <img src="./img/gorra.png" alt="" width="80px">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">gorra</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$10.000</span>
+                        </div>
+                        <span class="btn-eliminar">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                    <div class="carrito-item">
+                        <img src="./img/medias.png" alt="" width="80px">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">medias</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$1.000</span>
+                        </div>
+                        <span class="btn-eliminar">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                    <div class="carrito-item">
+                        <img src="./img/pantalon.jpg" alt="" width="80px">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">pantalon</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$18.000</span>
+                        </div>
+                        <span class="btn-eliminar">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                    <div class="carrito-item">
+                        <img src="./img/remera.jpg" alt="" width="80px">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">remera</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$6.000</span>
+                        </div>
+                        <span class="btn-eliminar">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                    <div class="carrito-item">
+                        <img src="./img/sandalias.jpg" alt="" width="80px">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">sandalias</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$10.000</span>
+                        </div>
+                        <span class="btn-eliminar">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                    <div class="carrito-item">
+                        <img src="./img/sweter.png" alt="" width="80px">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">sweter</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$15.000</span>
+                        </div>
+                        <span class="btn-eliminar">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+                    <div class="carrito-item">
+                        <img src="./img/zapatillas.jpg" alt="" width="80px">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">zapatillas</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$20.000</span>
+                        </div>
+                        <span class="btn-eliminar">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </span>
+                    </div>
+
+
+*/

@@ -1,127 +1,136 @@
-const prendas = [
-    { nombre: "Zapatillas", precio: "$25.000", codigo: 1, img: "./img/zapatillas.jpg", },
-    { nombre: "Remera", precio: "$10.000", codigo: 2, img: "./img/remera.jpg", },
-    { nombre: "Pantalon", precio: "$15.000", codigo: 3, img: "./img/pantalon.jpg", },
-    { nombre: "Buzo", precio: "$18.000", codigo: 4, img: "./img/buzo.jpg", },
-    { nombre: "Botas", precio: "$35.000", codigo: 5, img: "./img/botas.jpg", },
-    { nombre: "Campera", precio: "$15.000", codigo: 6, img: "./img/campera.jpg", },
-    { nombre: "Sandalias", precio: "$5.000", codigo: 7, img: "./img/sandalias.jpg", },
-    { nombre: "Camisa", precio: "$27.000", codigo: 8, img: "./img/camisa.png", },
-    { nombre: "Medias", precio: "$1.000", codigo: 9, img: "./img/medias.png", },
-    { nombre: "Cordones", precio: "$800", codigo: 10, img: "./img/cordones.png", },
-    { nombre: "Body", precio: "$7.000", codigo: 11, img: "./img/body.png", },
-    { nombre: "Sweter", precio: "$12.000", codigo: 12, img: "./img/sweter.png", },
-    { nombre: "Anteojos", precio: "$20.000", codigo: 13, img: "./img/anteojos.png", },
-    { nombre: "Gorra", precio: "$19.000", codigo: 14, img: "./img/gorra.png", },
-];
+let carritoVisible = false;
+if (document.readyState == "loading") {
+    document.addEventListener("DOMContentLoaded", ready)
+} else {
+    ready();
+}
 
-let carrito = []
+function ready() {
+    let botonesEliminarItem = document.getElementsByClassName("btn-eliminar");
+    for (let i = 0; i < botonesEliminarItem.length; i++) {
+        let button = botonesEliminarItem[i];
+        button.addEventListener("click", eliminarItemCarrito);
+    }
+    let botonesSumarCantidad = document.getElementsByClassName("sumar-cantidad");
+    for (let i = 0; i < botonesSumarCantidad.length; i++) {
+        let button = botonesSumarCantidad[i];
+        button.addEventListener("click", sumarCantidad);
+    }
+    let botonesRestarCantidad = document.getElementsByClassName("restar-cantidad");
+    for (let i = 0; i < botonesRestarCantidad.length; i++) {
+        let button = botonesRestarCantidad[i];
+        button.addEventListener("click", restarCantidad);
+    }
+    let botonesAgregarAlCarrito = document.getElementsByClassName("button-item");
+    for (let i = 0; i < botonesAgregarAlCarrito.length; i++) {
+        let button = botonesAgregarAlCarrito[i];
+        button.addEventListener("click", agregarAlCarritoClicked);
+    }
 
-function saludo() {
-    return "Hola, Bienvenid@ a Empilchate, ¡espero que te podamos ayudar!"
 }
 
 
-let seleccion = confirm("Hola, Bienvenid@ a Empilchate ¿desea comprar ropa?")
-
-while (seleccion) {
-    alert("estas son las prendas que tenemos disponibles: ")
-    let prendasDisponibles = prendas.map((prendas) => prendas.nombre + " " + prendas.precio)
-    alert(prendasDisponibles.join(" - "))
-    break;
+function actualizarTotalCarrito() {
+    let carritoContenedor = document.getElementsByClassName("carrito")[0];
+    let carritoItems = carritoContenedor.getElementsByClassName("carrito-item");
+    let total = 0
+    for (let i = 0; i < carritoItems.length; i++) {
+        let item = carritoItems[i];
+        let precioElemento = item.getElementsByClassName("carrito-item-precio")[0];
+        console.log(precioElemento);
+        let precio = parseFloat(precioElemento.innerText.replace("$", "").replace(".", ""));
+        console.log(precio);
+        let cantidadItem = item.getElementsByClassName("carrito-item-cantidad")[0]
+        let cantidad = cantidadItem.value;
+        console.log(cantidad);
+        total = total + (precio * cantidad);
+    }
+    total = Math.round(total * 100) / 100;
+    document.getElementsByClassName("carrito-precio-total")[0].innerText = "$" + total.toLocaleString("es") + ",00";
 }
 
-while (seleccion) {
-    let prendas = prompt("Agrega una prenda a tu carrito")
-    let precio = 0
 
-    if (prendas == "remera" || prendas == "pantalon" || prendas == "zapatillas" || prendas == "botas" || prendas == "buzo" || prendas == "campera" || prendas == "Sandalias" || prendas == "Camisa" || prendas == "medias" || prendas == "cordones" || prendas == "body" || prendas == "sweter" || prendas == "anteojos" || prendas == "gorra") {
-        switch (prendas) {
-            case "remera":
-                precio = 10000;
-                break;
-            case "pantalon":
-                precio = 15000;
-                break;
-            case "zapatillas":
-                precio = 25000;
-                break;
-            case "buzo":
-                precio = 18000;
-                break;
-            case "botas":
-                precio = 35000;
-                break;
-            case "campera":
-                precio = 15000;
-                break;
-            case "sandalias":
-                precio = 5000;
-                break;
-            case "camisa":
-                precio = 27000;
-                break;
-            case "medias":
-                precio = 1000;
-                break;
-            case "cordones":
-                precio = 800;
-                break;
-            case "body":
-                precio = 7000;
-                break;
-            case "sweter":
-                precio = 12000;
-                break;
-            case "anteojos":
-            precio = 20000;
-                break;
-            case "gorra":
-                precio = 19000;
-                break;
-            default:
+function eliminarItemCarrito(event) {
+    let buttonClicked = event.target;
+    buttonClicked.parentElement.remove();
+    actualizarTotalCarrito();
+    ocultarCarrito();
+
+}
+
+function ocultarCarrito(){
+    let carritoItems = document.getElementsByClassName("carrito-items")[0];
+    if(carritoItems.childElementCount==0){
+        let carrito = document.getElementsByClassName("carrito")[0];
+        carrito.style.marginRight = "-100%";
+        carrito.style.opacity="0";
+        carritoVisible = false;
+        let items = document.getElementsByClassName("contenedor-items")[0];
+        items.style.width = "100%";
+    }
+}
+
+function sumarCantidad(event) {
+    let buttonClicked = event.target;
+    let selector = buttonClicked.parentElement;
+    let cantidadActual = selector.getElementsByClassName("carrito-item-cantidad")[0].value;
+    console.log(cantidadActual);
+    cantidadActual++;
+    selector.getElementsByClassName("carrito-item-cantidad")[0].value = cantidadActual;
+    actualizarTotalCarrito();
+}
+
+function restarCantidad(event) {
+    let buttonClicked = event.target;
+    let selector = buttonClicked.parentElement;
+    let cantidadActual = selector.getElementsByClassName("carrito-item-cantidad")[0].value;
+    console.log(cantidadActual);
+    cantidadActual--;
+    if (cantidadActual >= 1) {
+        selector.getElementsByClassName("carrito-item-cantidad")[0].value = cantidadActual;
+        actualizarTotalCarrito();
+    }
+}
+
+function agregarAlCarritoClicked(event) {
+    let button = event.target;
+    let item = button.parentElement;
+    let titulo = item.getElementsByClassName("titulo-item")[0].innerText;
+    console.log(titulo);
+    let precio = item.getElementsByClassName("precio-item")[0].innerText;
+    let imagenSrc = item.getElementsByClassName("img-item")[0].src;
+    console.log(imagenSrc);
+    agregarItemAlCarrito(titulo, precio, imagenSrc);
+}
+
+function agregarItemAlCarrito(titulo, precio ,imagenSrc) {
+    let item = document.createElement("div");
+    item.classList.add = "item";
+    let itemsCarrito = document.getElementsByClassName("carrito-item")[0];
+    let nombresItemCarrito = itemsCarrito.getElementsByClassName("carrito-item-titulo");
+    for (let i = 0; i < nombresItemCarrito.length; i++) {
+        if (nombresItemCarrito[i].innerText == titulo) {
+            alert("Ya tienes ésta prenda en el carrito.")
+            return;
         }
-
-        let unidades = parseInt(prompt("¿Cuantas unidades desea comprar?"))
-        carrito.push({ prendas, unidades, precio })
-        console.log(carrito)
-    } else {
-        alert("Por el momento no contamos con esa prenda.")
     }
-
-    seleccion = prompt("¿Desea seguir comprando?")
-    if (seleccion == "no") {
-        alert("¡Gracias por su compra! esperemos que la disfrutes y que vuelva pronto.")
-        carrito.forEach((carritoFinal) => {
-            console.log(`producto: ${carritoFinal.prendas} / unidades: ${carritoFinal.unidades}  / precio total por prendas: ${carritoFinal.unidades * carritoFinal.precio}`)
-        })
-        break;
-    }
-}
-
-const total = carrito.reduce((acc, el) => acc + el.precio * el.unidades, 0)
-console.log("El total de la compra es de: " + total + " Gracias por su compra.")
-
-let card = document.getElementById("card-template");
-
-prendas.map((x) => {
-    card.innerHTML += `
-    
-    <div class="col">
-    <div class="card">
-        <img src="${x.img}" class="card-img-top" alt="${x.nombre}">
-        <div class="card-body">
-            <h5 class="card-title text-center text-primary">${x.nombre}</h5>
-            <p class="card-text"></p>
-            <div class="btn btn-primary" id="botonComprar"${x.botonComprar}>Comprar.</div>
+    let itemCarritoContenido = `
+    <div class="carrito-item">
+        <img class="img-carrito" src="./img/anteojos.png" alt="" width="80px">
+        <div class="carrito-item-detalles">
+            <span class="carrito-item-titulo">Anteojo</span>
+            <div class="selector-cantidad">
+                <i class="fa-solid fa-minus restar-cantidad"></i>
+                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                <i class="fa-solid fa-plus sumar-cantidad"></i>
+            </div>
+            <span class="carrito-item-precio">$15.000</span>
         </div>
+        <span class="btn-eliminar">
+            <i class="fa-solid fa-trash-can"></i>
+        </span>
     </div>
-</div>
-    `;
-})
-
-const botonComprar = document.querySelector("div#botonComprar")
-botonComprar.addEventListener("click", () => {
-    console.log(" Producto agregado al carrito. ")
-    alert(" Producto agregado al carrito. ")
-})
+    `
+    item.innerHTML = itemCarritoContenido;
+    itemsCarrito.append(item);
+}
