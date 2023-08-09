@@ -1,184 +1,551 @@
-/*
-                    <div class="carrito-item">
-                        <img src="./img/botas.jpg" alt="" width="80px">
-                        <div class="carrito-item-detalles">
-                            <span class="carrito-item-titulo">Botas</span>
-                            <div class="selector-cantidad">
-                                <i class="fa-solid fa-minus restar-cantidad"></i>
-                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                                <i class="fa-solid fa-plus sumar-cantidad"></i>
-                            </div>
-                            <span class="carrito-item-precio">$20.000</span>
-                        </div>
-                        <span class="btn-eliminar">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </span>
-                    </div>
-                    <div class="carrito-item">
-                        <img src="./img/buzo.jpg" alt="" width="80px">
-                        <div class="carrito-item-detalles">
-                            <span class="carrito-item-titulo">buzo</span>
-                            <div class="selector-cantidad">
-                                <i class="fa-solid fa-minus restar-cantidad"></i>
-                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                                <i class="fa-solid fa-plus sumar-cantidad"></i>
-                            </div>
-                            <span class="carrito-item-precio">$13.000</span>
-                        </div>
-                        <span class="btn-eliminar">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </span>
-                    </div>
-                    <div class="carrito-item">
-                        <img src="./img/camisa.png" alt="" width="80px">
-                        <div class="carrito-item-detalles">
-                            <span class="carrito-item-titulo">camisa</span>
-                            <div class="selector-cantidad">
-                                <i class="fa-solid fa-minus restar-cantidad"></i>
-                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                                <i class="fa-solid fa-plus sumar-cantidad"></i>
-                            </div>
-                            <span class="carrito-item-precio">$12.000</span>
-                        </div>
-                        <span class="btn-eliminar">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </span>
-                    </div>
-                    <div class="carrito-item">
-                        <img src="./img/campera.jpg" alt="" width="80px">
-                        <div class="carrito-item-detalles">
-                            <span class="carrito-item-titulo">campera</span>
-                            <div class="selector-cantidad">
-                                <i class="fa-solid fa-minus restar-cantidad"></i>
-                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                                <i class="fa-solid fa-plus sumar-cantidad"></i>
-                            </div>
-                            <span class="carrito-item-precio">$17.000</span>
-                        </div>
-                        <span class="btn-eliminar">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </span>
-                    </div>
-                    <div class="carrito-item">
-                        <img src="./img/cordones.png" alt="" width="80px">
-                        <div class="carrito-item-detalles">
-                            <span class="carrito-item-titulo">cordones</span>
-                            <div class="selector-cantidad">
-                                <i class="fa-solid fa-minus restar-cantidad"></i>
-                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                                <i class="fa-solid fa-plus sumar-cantidad"></i>
-                            </div>
-                            <span class="carrito-item-precio">$1.000</span>
-                        </div>
-                        <span class="btn-eliminar">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </span>
-                    </div>
-                    <div class="carrito-item">
-                        <img src="./img/gorra.png" alt="" width="80px">
-                        <div class="carrito-item-detalles">
-                            <span class="carrito-item-titulo">gorra</span>
-                            <div class="selector-cantidad">
-                                <i class="fa-solid fa-minus restar-cantidad"></i>
-                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                                <i class="fa-solid fa-plus sumar-cantidad"></i>
-                            </div>
-                            <span class="carrito-item-precio">$10.000</span>
-                        </div>
-                        <span class="btn-eliminar">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </span>
-                    </div>
-                    <div class="carrito-item">
-                        <img src="./img/medias.png" alt="" width="80px">
-                        <div class="carrito-item-detalles">
-                            <span class="carrito-item-titulo">medias</span>
-                            <div class="selector-cantidad">
-                                <i class="fa-solid fa-minus restar-cantidad"></i>
-                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                                <i class="fa-solid fa-plus sumar-cantidad"></i>
-                            </div>
-                            <span class="carrito-item-precio">$1.000</span>
-                        </div>
-                        <span class="btn-eliminar">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </span>
-                    </div>
-                    <div class="carrito-item">
-                        <img src="./img/pantalon.jpg" alt="" width="80px">
-                        <div class="carrito-item-detalles">
-                            <span class="carrito-item-titulo">pantalon</span>
-                            <div class="selector-cantidad">
-                                <i class="fa-solid fa-minus restar-cantidad"></i>
-                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                                <i class="fa-solid fa-plus sumar-cantidad"></i>
-                            </div>
-                            <span class="carrito-item-precio">$18.000</span>
-                        </div>
-                        <span class="btn-eliminar">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </span>
-                    </div>
-                    <div class="carrito-item">
-                        <img src="./img/remera.jpg" alt="" width="80px">
-                        <div class="carrito-item-detalles">
-                            <span class="carrito-item-titulo">remera</span>
-                            <div class="selector-cantidad">
-                                <i class="fa-solid fa-minus restar-cantidad"></i>
-                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                                <i class="fa-solid fa-plus sumar-cantidad"></i>
-                            </div>
-                            <span class="carrito-item-precio">$6.000</span>
-                        </div>
-                        <span class="btn-eliminar">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </span>
-                    </div>
-                    <div class="carrito-item">
-                        <img src="./img/sandalias.jpg" alt="" width="80px">
-                        <div class="carrito-item-detalles">
-                            <span class="carrito-item-titulo">sandalias</span>
-                            <div class="selector-cantidad">
-                                <i class="fa-solid fa-minus restar-cantidad"></i>
-                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                                <i class="fa-solid fa-plus sumar-cantidad"></i>
-                            </div>
-                            <span class="carrito-item-precio">$10.000</span>
-                        </div>
-                        <span class="btn-eliminar">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </span>
-                    </div>
-                    <div class="carrito-item">
-                        <img src="./img/sweter.png" alt="" width="80px">
-                        <div class="carrito-item-detalles">
-                            <span class="carrito-item-titulo">sweter</span>
-                            <div class="selector-cantidad">
-                                <i class="fa-solid fa-minus restar-cantidad"></i>
-                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                                <i class="fa-solid fa-plus sumar-cantidad"></i>
-                            </div>
-                            <span class="carrito-item-precio">$15.000</span>
-                        </div>
-                        <span class="btn-eliminar">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </span>
-                    </div>
-                    <div class="carrito-item">
-                        <img src="./img/zapatillas.jpg" alt="" width="80px">
-                        <div class="carrito-item-detalles">
-                            <span class="carrito-item-titulo">zapatillas</span>
-                            <div class="selector-cantidad">
-                                <i class="fa-solid fa-minus restar-cantidad"></i>
-                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                                <i class="fa-solid fa-plus sumar-cantidad"></i>
-                            </div>
-                            <span class="carrito-item-precio">$20.000</span>
-                        </div>
-                        <span class="btn-eliminar">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </span>
-                    </div>
+
+/* <div class="carrito-item">
+    <img src="./img/botas.jpg" alt="" width="80px">
+    <div class="carrito-item-detalles">
+        <span class="carrito-item-titulo">Botas</span>
+        <div class="selector-cantidad">
+            <i class="fa-solid fa-minus restar-cantidad"></i>
+            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+            <i class="fa-solid fa-plus sumar-cantidad"></i>
+        </div>
+        <span class="carrito-item-precio">$20.000</span>
+    </div>
+    <span class="btn-eliminar">
+        <i class="fa-solid fa-trash-can"></i>
+    </span>
+</div>
+<div class="carrito-item">
+    <img src="./img/buzo.jpg" alt="" width="80px">
+    <div class="carrito-item-detalles">
+        <span class="carrito-item-titulo">buzo</span>
+        <div class="selector-cantidad">
+            <i class="fa-solid fa-minus restar-cantidad"></i>
+            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+            <i class="fa-solid fa-plus sumar-cantidad"></i>
+        </div>
+        <span class="carrito-item-precio">$13.000</span>
+    </div>
+    <span class="btn-eliminar">
+        <i class="fa-solid fa-trash-can"></i>
+    </span>
+</div>
+<div class="carrito-item">
+    <img src="./img/camisa.png" alt="" width="80px">
+    <div class="carrito-item-detalles">
+        <span class="carrito-item-titulo">camisa</span>
+        <div class="selector-cantidad">
+            <i class="fa-solid fa-minus restar-cantidad"></i>
+            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+            <i class="fa-solid fa-plus sumar-cantidad"></i>
+        </div>
+        <span class="carrito-item-precio">$12.000</span>
+    </div>
+    <span class="btn-eliminar">
+        <i class="fa-solid fa-trash-can"></i>
+    </span>
+</div>
+<div class="carrito-item">
+    <img src="./img/campera.jpg" alt="" width="80px">
+    <div class="carrito-item-detalles">
+        <span class="carrito-item-titulo">campera</span>
+        <div class="selector-cantidad">
+            <i class="fa-solid fa-minus restar-cantidad"></i>
+            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+            <i class="fa-solid fa-plus sumar-cantidad"></i>
+        </div>
+        <span class="carrito-item-precio">$17.000</span>
+    </div>
+    <span class="btn-eliminar">
+        <i class="fa-solid fa-trash-can"></i>
+    </span>
+</div>
+<div class="carrito-item">
+    <img src="./img/cordones.png" alt="" width="80px">
+    <div class="carrito-item-detalles">
+        <span class="carrito-item-titulo">cordones</span>
+        <div class="selector-cantidad">
+            <i class="fa-solid fa-minus restar-cantidad"></i>
+            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+            <i class="fa-solid fa-plus sumar-cantidad"></i>
+        </div>
+        <span class="carrito-item-precio">$1.000</span>
+    </div>
+    <span class="btn-eliminar">
+        <i class="fa-solid fa-trash-can"></i>
+    </span>
+</div>
+<div class="carrito-item">
+    <img src="./img/gorra.png" alt="" width="80px">
+    <div class="carrito-item-detalles">
+        <span class="carrito-item-titulo">gorra</span>
+        <div class="selector-cantidad">
+            <i class="fa-solid fa-minus restar-cantidad"></i>
+            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+            <i class="fa-solid fa-plus sumar-cantidad"></i>
+        </div>
+        <span class="carrito-item-precio">$10.000</span>
+    </div>
+    <span class="btn-eliminar">
+        <i class="fa-solid fa-trash-can"></i>
+    </span>
+</div>
+<div class="carrito-item">
+    <img src="./img/medias.png" alt="" width="80px">
+    <div class="carrito-item-detalles">
+        <span class="carrito-item-titulo">medias</span>
+        <div class="selector-cantidad">
+            <i class="fa-solid fa-minus restar-cantidad"></i>
+            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+            <i class="fa-solid fa-plus sumar-cantidad"></i>
+        </div>
+        <span class="carrito-item-precio">$1.000</span>
+    </div>
+    <span class="btn-eliminar">
+        <i class="fa-solid fa-trash-can"></i>
+    </span>
+</div>
+<div class="carrito-item">
+    <img src="./img/pantalon.jpg" alt="" width="80px">
+    <div class="carrito-item-detalles">
+        <span class="carrito-item-titulo">pantalon</span>
+        <div class="selector-cantidad">
+            <i class="fa-solid fa-minus restar-cantidad"></i>
+            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+            <i class="fa-solid fa-plus sumar-cantidad"></i>
+        </div>
+        <span class="carrito-item-precio">$18.000</span>
+    </div>
+    <span class="btn-eliminar">
+        <i class="fa-solid fa-trash-can"></i>
+    </span>
+</div>
+<div class="carrito-item">
+    <img src="./img/remera.jpg" alt="" width="80px">
+    <div class="carrito-item-detalles">
+        <span class="carrito-item-titulo">remera</span>
+        <div class="selector-cantidad">
+            <i class="fa-solid fa-minus restar-cantidad"></i>
+            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+            <i class="fa-solid fa-plus sumar-cantidad"></i>
+        </div>
+        <span class="carrito-item-precio">$6.000</span>
+    </div>
+    <span class="btn-eliminar">
+        <i class="fa-solid fa-trash-can"></i>
+    </span>
+</div>
+<div class="carrito-item">
+    <img src="./img/sandalias.jpg" alt="" width="80px">
+    <div class="carrito-item-detalles">
+        <span class="carrito-item-titulo">sandalias</span>
+        <div class="selector-cantidad">
+            <i class="fa-solid fa-minus restar-cantidad"></i>
+            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+            <i class="fa-solid fa-plus sumar-cantidad"></i>
+        </div>
+        <span class="carrito-item-precio">$10.000</span>
+    </div>
+    <span class="btn-eliminar">
+        <i class="fa-solid fa-trash-can"></i>
+    </span>
+</div>
+<div class="carrito-item">
+    <img src="./img/sweter.png" alt="" width="80px">
+    <div class="carrito-item-detalles">
+        <span class="carrito-item-titulo">sweter</span>
+        <div class="selector-cantidad">
+            <i class="fa-solid fa-minus restar-cantidad"></i>
+            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+            <i class="fa-solid fa-plus sumar-cantidad"></i>
+        </div>
+        <span class="carrito-item-precio">$15.000</span>
+    </div>
+    <span class="btn-eliminar">
+        <i class="fa-solid fa-trash-can"></i>
+    </span>
+</div>
+<div class="carrito-item">
+    <img src="./img/zapatillas.jpg" alt="" width="80px">
+    <div class="carrito-item-detalles">
+        <span class="carrito-item-titulo">zapatillas</span>
+        <div class="selector-cantidad">
+            <i class="fa-solid fa-minus restar-cantidad"></i>
+            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+            <i class="fa-solid fa-plus sumar-cantidad"></i>
+        </div>
+        <span class="carrito-item-precio">$20.000</span>
+    </div>
+    <span class="btn-eliminar">
+        <i class="fa-solid fa-trash-can"></i>
+    </span>
+</div>
 
 
 */
+let carritoVisible = false;
+if (document.readyState == "loading") {
+    document.addEventListener("DOMContentLoaded", ready)
+} else {
+    ready();
+}
+
+function ready() {
+    let botonesEliminarItem = document.getElementsByClassName("btn-eliminar");
+    for (let i = 0; i < botonesEliminarItem.length; i++) {
+        let button = botonesEliminarItem[i];
+        button.addEventListener("click", eliminarItemCarrito);
+    }
+    let botonesSumarCantidad = document.getElementsByClassName("sumar-cantidad");
+    for (let i = 0; i < botonesSumarCantidad.length; i++) {
+        let button = botonesSumarCantidad[i];
+        button.addEventListener("click", sumarCantidad);
+    }
+    let botonesRestarCantidad = document.getElementsByClassName("restar-cantidad");
+    for (let i = 0; i < botonesRestarCantidad.length; i++) {
+        let button = botonesRestarCantidad[i];
+        button.addEventListener("click", restarCantidad);
+    }
+    let botonesAgregarAlCarrito = document.getElementsByClassName("button-item");
+    for (let i = 0; i < botonesAgregarAlCarrito.length; i++) {
+        let button = botonesAgregarAlCarrito[i];
+        button.addEventListener("click", agregarAlCarritoClicked);
+    }
+
+}
+
+
+function actualizarTotalCarrito() {
+    let carritoContenedor = document.getElementsByClassName("carrito")[0];
+    let carritoItems = carritoContenedor.getElementsByClassName("carrito-item");
+    let total = 0
+    for (let i = 0; i < carritoItems.length; i++) {
+        let item = carritoItems[i];
+        let precioElemento = item.getElementsByClassName("carrito-item-precio")[0];
+        console.log(precioElemento);
+        let precio = parseFloat(precioElemento.innerText.replace("$", "").replace(".", ""));
+        console.log(precio);
+        let cantidadItem = item.getElementsByClassName("carrito-item-cantidad")[0]
+        let cantidad = cantidadItem.value;
+        console.log(cantidad);
+        total = total + (precio * cantidad);
+    }
+    total = Math.round(total * 100) / 100;
+    document.getElementsByClassName("carrito-precio-total")[0].innerText = "$" + total.toLocaleString("es") + ",00";
+}
+
+
+function eliminarItemCarrito(event) {
+    let buttonClicked = event.target;
+    buttonClicked.parentElement.remove();
+    actualizarTotalCarrito();
+    ocultarCarrito();
+
+}
+
+function ocultarCarrito(){
+    let carritoItems = document.getElementsByClassName("carrito-items")[0];
+    if(carritoItems.childElementCount==0){
+        let carrito = document.getElementsByClassName("carrito")[0];
+        carrito.style.marginRight = "-100%";
+        carrito.style.opacity="0";
+        carritoVisible = false;
+        let items = document.getElementsByClassName("contenedor-items")[0];
+        items.style.width = "100%";
+    }
+}
+
+function sumarCantidad(event) {
+    let buttonClicked = event.target;
+    let selector = buttonClicked.parentElement;
+    let cantidadActual = selector.getElementsByClassName("carrito-item-cantidad")[0].value;
+    console.log(cantidadActual);
+    cantidadActual++;
+    selector.getElementsByClassName("carrito-item-cantidad")[0].value = cantidadActual;
+    actualizarTotalCarrito();
+}
+
+function restarCantidad(event) {
+    let buttonClicked = event.target;
+    let selector = buttonClicked.parentElement;
+    let cantidadActual = selector.getElementsByClassName("carrito-item-cantidad")[0].value;
+    console.log(cantidadActual);
+    cantidadActual--;
+    if (cantidadActual >= 1) {
+        selector.getElementsByClassName("carrito-item-cantidad")[0].value = cantidadActual;
+        actualizarTotalCarrito();
+    }
+}
+
+function agregarAlCarritoClicked(event) {
+    let button = event.target;
+    let item = button.parentElement;
+    let titulo = item.getElementsByClassName("titulo-item")[0].innerText;
+    console.log(titulo);
+    let precio = item.getElementsByClassName("precio-item")[0].innerText;
+    let imagenSrc = item.getElementsByClassName("img-item")[0].src;
+    console.log(imagenSrc);
+    agregarItemAlCarrito(titulo, precio, imagenSrc);
+}
+
+function agregarItemAlCarrito(titulo, precio ,imagenSrc) {
+    let item = document.createElement("div");
+    item.classList.add = "item";
+    let itemsCarrito = document.getElementsByClassName("carrito-item")[0];
+    let nombresItemCarrito = itemsCarrito.getElementsByClassName("carrito-item-titulo");
+    for (let i = 0; i < nombresItemCarrito.length; i++) {
+        if (nombresItemCarrito[i].innerText == titulo) {
+            alert("Ya tienes ésta prenda en el carrito.")
+            return;
+        }
+    }
+    let itemCarritoContenido = `
+    <div class="carrito-item">
+        <img class="${imagenSrc}" src="./img/anteojos.png" alt="" width="80px">
+        <div class="carrito-item-detalles">
+            <span class="carrito-item-titulo">${titulo}</span>
+            <div class="selector-cantidad">
+                <i class="fa-solid fa-minus restar-cantidad"></i>
+                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                <i class="fa-solid fa-plus sumar-cantidad"></i>
+            </div>
+            <span class="carrito-item-precio">${precio}</span>
+        </div>
+        <span class="btn-eliminar">
+            <i class="fa-solid fa-trash-can"></i>
+        </span>
+    </div>
+    `
+    item.innerHTML = itemCarritoContenido;
+    itemsCarrito.append(item);
+    item.getElementsByClassName("btn-eliminar")[0].addEventListener("click", eliminarItemCarrito);
+    let botonesSumarCantidad = item.getElementsByClassName("sumar-cantidad")[0];
+    botonesSumarCantidad.addEventListener("click", sumarCantidad); 
+    let botonesRestarCantidad = item.getElementsByClassName("restar-cantidad")[0];
+    botonesRestarCantidad.addEventListener("click", restarCantidad); 
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+}
+
+header{
+    background-color: rgb(133, 133, 133);
+}
+header h1{
+    text-align: center;
+    font-size: 40px;
+    padding: 30px 0;
+}
+
+img{
+    width: 200px;
+    height: 300px;
+}
+.contenedor{
+    max-width: 1200px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    contain: paint;
+}
+
+.contenedor .contenedor-items{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+    width: 60%;
+    transition: .3s;
+}
+
+.contenedor .contenedor-items .item{
+    max-width: 200px;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    transition: .3s;
+}
+
+.contenedor-items .item:hover{
+    box-shadow: 0 0 10px black;
+    scale: 1.1;
+}
+
+.contenedor-items .item .img-items{
+    width: 100%;
+}
+
+.contenedor-items .item .titulo-item{
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.contenedor-items .item .precio-item{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+
+.contenedor-items .item .button-item{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carrito{
+    border: 1px solid black;
+    width: 35%;
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: auto;
+    position: sticky !important;
+    top: 0;
+    transition: .3s;
+}
+
+.img-carrito{
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.carrito .header-carrito{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.carrito .carrito-item{
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid black;
+    padding: 20px;
+}
+
+.carrito .carrito-item .carrito-item-titulo{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.carrito .carrito-item .selector-cantidad{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.carrito .carrito-item .carrito-item-cantidad{
+    border: none;
+    font-size: 18px;
+    background: transparent;
+    display: inline-block;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+.carrito .carrito-item .selector-cantidad i{
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.carrito .carrito-item .carrito-item-precio{
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.carrito .carrito-item .btn-eliminar{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: black;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid black;
+    cursor: pointer;
+    display: block;
+    background-color: transparent;
+    z-index: 20;
+}
+
+.carrito .carrito-item .btn-eliminar i{
+    pointer-events: none;
+}
+
+.carrito-total{
+    background-color: transparent;
+}
+
+.carrito-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.carrito-total .btn-pagar{
+    display: block;
+    width: 50%;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+    margin: 5px;
+}
+
+.carrito-total .btn-pagar:hover{
+    scale: 1.1;
+}
+
+
+
+main{
+    background-color: rgb(185, 185, 185);
+}
+
+footer{
+    background-color: rgb(133, 133, 133);
+}

@@ -8,6 +8,9 @@
 
 header{
     background-color: rgb(133, 133, 133);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
 }
 header h1{
     text-align: center;
@@ -15,10 +18,7 @@ header h1{
     padding: 30px 0;
 }
 
-img{
-    width: 200px;
-    height: 300px;
-}
+
 .contenedor{
     max-width: 1200px;
     padding: 10px;
@@ -40,12 +40,15 @@ img{
 
 .contenedor .contenedor-items .item{
     max-width: 200px;
-    padding: 10px;
     margin: auto;
     border: 1px solid black;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
     transition: .3s;
+}
+
+.contenedor .contenedor-items .item .img-item{
+    width: 100%;
 }
 
 .contenedor-items .item:hover{
@@ -53,17 +56,13 @@ img{
     scale: 1.1;
 }
 
-.contenedor-items .item .img-items{
-    width: 100%;
-}
 
-.contenedor-items .item .titulo-item{
+.contenedor .contenedor-items .item .titulo-item{
     display: block;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
 }
-
 
 .contenedor-items .item .precio-item{
     display: block;
@@ -85,7 +84,7 @@ img{
 }
 
 .carrito{
-    border: 1px solid black;
+    border: 1px solid #666;
     width: 35%;
     margin-top: 30px;
     border-radius: 10px;
@@ -94,6 +93,8 @@ img{
     position: sticky !important;
     top: 0;
     transition: .3s;
+    margin-right: -100%;
+    opacity: 0;
 }
 
 .img-carrito{
@@ -103,8 +104,8 @@ img{
 }
 
 .carrito .header-carrito{
-    background-color: black;
-    color: white;
+    background-color: #000;
+    color: #fff;
     text-align: center;
     padding: 30px 0;
 }
@@ -113,9 +114,14 @@ img{
     display: flex;
     align-items: center;
     position: relative;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #666;
     padding: 20px;
 }
+
+.carrito .carrito-item img{
+    margin-right: 20px;
+}
+
 
 .carrito .carrito-item .carrito-item-titulo{
     display: block;
@@ -182,21 +188,21 @@ img{
     background-color: transparent;
 }
 
-.carrito-total{
+.carrito-total .fila{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 15px;
+    font-size: 22px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .carrito-total .btn-pagar{
     display: block;
-    width: 50%;
+    width: 100%;
     border: none;
-    background-color: black;
-    color: white;
+    background: #000;
+    color: #fff;
     border-radius: 5px;
     font-size: 18px;
     padding: 20px;
@@ -205,8 +211,8 @@ img{
     align-items: center;
     cursor: pointer;
     transition: .3s;
-    margin: 5px;
 }
+
 
 .carrito-total .btn-pagar:hover{
     scale: 1.1;
@@ -221,3 +227,21 @@ main{
 footer{
     background-color: rgb(133, 133, 133);
 }
+
+@media screen and (max-width: 850px) {
+    .contenedor {
+    display: block;
+    }
+    .contenedor-items{
+        width: 100% !important;
+    }
+    .carrito{
+        width: 100%;
+    }
+}
+
+.dark-mode{
+    background-color: #333;
+    color: rgb(221, 212, 212);
+}
+
